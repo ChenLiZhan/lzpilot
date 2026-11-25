@@ -1,0 +1,14 @@
+{
+  "name": "lzpilot",
+  "owner": {
+    "name": "ChenLiZhan"
+  },
+  "description": "lzpilot 的 marketplace。The marketplace for lzpilot.",
+  "plugins": [
+    {
+      "name": "lzpilot",
+      "source": "./plugins/lzpilot",
+      "description": "一個入口，依任務選 playbook，照步驟完成並交出證據。One entry that routes each task to a playbook and returns evidence."
+    }
+  ]
+}
