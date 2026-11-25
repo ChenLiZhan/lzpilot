@@ -61,6 +61,7 @@ playbook 不可以寫任何放寬自主權的句子。自主權只由 SKILL.md �
 2. 執行 `scripts/check.sh`。
 3. commit，push。
 4. 各機器執行 `claude plugin update lzpilot@lzpilot`。
+5. claude.ai：marketplace 已開啟 Sync automatically，push 後會自動同步。要確認時，到 Plugins → Add → Manage marketplaces，看 Synced commit 是不是最新的 commit。沒有更新，就從 lzpilot 那一列的 ⋯ 點 Check for updates。plugin 頁面的 Version 要重新整理頁面才會變。
 
 ## 去識別化
 
