@@ -13,15 +13,16 @@ description: lzpilot 的入口。只在使用者輸入 /lzpilot:go 或提到 lzp
 
 ## 步驟
 
-1. 判斷介面。有 Bash 工具，就是 Claude Code。沒有 Bash 工具，就是 Chat。
-2. 依任務選一本 playbook。比對下方索引的「何時用」欄位。沒有一本明確符合，就用 `_fallback`。
-3. 讀選中的 playbook 全文。
-4. 檢查 playbook 的 `needs`。介面缺少其中任何工具，就告訴使用者需要什麼，然後停止。
-5. 決定回答方式。`style` 是 `technical` 或 `plain`，就用那一個。`style` 是 `auto`，Claude Code 用 `technical`，Chat 用 `plain`。
-6. 把 playbook 的步驟原文複製到 todo list。有 todo 或 task 工具就用它。沒有就列在回覆裡。
-7. 照步驟做。步驟要用到某條 principle 時，先讀它在 `principles/` 的全文。
-8. 照下方的回答方式和 playbook 的「回覆」寫回覆。
-9. 對話被摘要或壓縮後，先重讀選中的 playbook 再繼續。todo list 是進度的依據。
+1. 依任務選一本 playbook。比對下方索引的「何時用」欄位。沒有一本明確符合，就用 `_fallback`。
+2. 讀選中的 playbook 全文。
+3. 檢查 playbook 的 `needs`。缺少其中任何工具，就告訴使用者需要什麼，然後停止。
+4. 決定回答方式。`style` 是 `technical` 或 `plain`，就用那一個。`style` 是 `auto`，就看請求本身：
+   - 請求提到程式碼、指令、repo，或使用者自己用了技術術語，用 `technical`。
+   - 其他情況用 `plain`。
+5. 把 playbook 的步驟原文複製到 todo list。有 todo 或 task 工具就用它。沒有就列在回覆裡。
+6. 照步驟做。步驟要用到某條 principle 時，先讀它在 `principles/` 的全文。
+7. 照下方的回答方式和 playbook 的「回覆」寫回覆。
+8. 對話被摘要或壓縮後，先重讀選中的 playbook 再繼續。todo list 是進度的依據。
 
 ## 語言
 
